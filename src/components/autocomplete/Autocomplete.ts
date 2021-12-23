@@ -30,7 +30,7 @@ export default class Autocomplete extends Vue {
 
   public isInputFocused = false;
 
-  public isMouseHovered = false;
+  public isAlertHovered = false;
 
   private created(): void {
     if (this.focus) {
@@ -51,7 +51,7 @@ export default class Autocomplete extends Vue {
   }
 
   public toggleMouseHover(): void {
-    this.isMouseHovered = !this.isMouseHovered;
+    this.isAlertHovered = !this.isAlertHovered;
   }
 
   public get icon(): AutocompleteIcons {

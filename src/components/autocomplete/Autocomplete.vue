@@ -26,7 +26,7 @@
         @mouseleave="toggleMouseHover"
       ></i>
 
-      <div v-show="isMouseHovered" class="autocomplete__alert-message">
+      <div v-show="isAlertHovered" class="autocomplete__alert-message">
         Type at least 3 characters
       </div>
     </div>
