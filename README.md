@@ -1,4 +1,4 @@
-# autocomplete
+# Autocomplete
 
 ## Project setup
 ```
@@ -6,9 +6,14 @@ yarn install
 ```
 
 ### Running mocked data
+
+##### Install JSON Server
 ```
-Install JSON Server: npm install -g json-server
-Start JSON Server: json-server --watch db/data-sets.json
+npm install -g json-server
+```
+##### Start JSON Server
+```
+json-server --watch db/data-sets.json
 ```
 
 ### Compiles and hot-reloads for development
