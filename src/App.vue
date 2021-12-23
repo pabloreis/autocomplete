@@ -1,29 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app" class="flex-column">
+    <h1>Autocomplete</h1>
+
+    <main class="main">
+      <section class="main__section flex">
+        <template v-if="!loading">
+          <div class="flex-column">
+            <h2>Search for cities</h2>
+            <Autocomplete :focus="true" placeholder="Search by city name" :options="cities" />
+          </div>
+
+          <div class="flex-column">
+            <h2>Search for books</h2>
+            <Autocomplete placeholder="Search by book title" :options="books" />
+          </div>
+        </template>
+        <template v-else>
+          <i class="main__loading fa fa-spinner"></i>
+        </template>
+      </section>
+    </main>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+<script lang="ts" src="./App.ts"></script>
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
-</script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./App.scss"></style>

@@ -14,6 +14,11 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-shadow': 'off',
+    'refer-default-export': 'off',
+    'class-methods-use-this': 'off',
+    'no-new': 'off',
+    'import/no-cycle': 'off'
   },
   overrides: [
     {

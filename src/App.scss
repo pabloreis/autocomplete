@@ -1,0 +1,57 @@
+@import './styles/constants';
+@import './styles/global';
+@import './styles/utils';
+
+@import './components/components';
+
+#app {
+  align-items: center;
+  background: radial-gradient(86.46% 86.46% at 50% 13.54%, $secondary-color 0%, $primary-color 100%);
+  gap: 4 * $base-space;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+
+  h1 {
+    color: $white;
+    font-size: 4em;
+  }
+
+  .main {
+    &__section {
+      gap: 4 * $base-space;
+      padding: $space-16;
+
+      h2 {
+        margin-bottom: $base-space;
+      }
+    }
+    
+    &__loading {
+      font-size: 2em;
+      animation: loading-spin 2s linear infinite;
+    }
+
+    &__loading,
+    &__section h2 {
+      color: $white;
+    }
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    h1 {
+      font-size: 3em;
+    }
+
+    .main__section {
+      flex-direction: column;
+      gap: 11 * $base-space;
+    }
+  }
+}
+
+@keyframes loading-spin {
+  100% {
+    transform:rotate(360deg); 
+  } 
+}
